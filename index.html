@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Club de Regatas del Delta · Tigre, Argentina · Desde 1941</title>
+<meta name="description" content="Desde las entrañas del Delta, el corazón náutico de la Argentina. Regatas, remo y tradición en el río Luján. Casino físico dentro del complejo del club.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F6F1E4;--ink:#232019;--forest:#1F4D3A;--mustard:#D9A441;--casino:#0f2e23}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:'Source Sans 3',system-ui,sans-serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+section{scroll-margin-top:24px}
+:focus-visible{outline:3px solid var(--mustard);outline-offset:2px}
+.display{font-family:'Abril Fatface',serif;font-weight:400}
+.wrap{max-width:1152px;margin:0 auto;padding:0 20px}
+@media(min-width:640px){.wrap{padding:0 32px}}
+.shell{padding:64px 0}
+@media(min-width:640px){.shell{padding:96px 0}}
+
+.paper-grain{background-color:var(--paper);background-image:radial-gradient(rgba(35,32,25,.06) 1px,transparent 1px),radial-gradient(rgba(35,32,25,.04) 1px,transparent 1px);background-size:3px 3px,7px 7px;background-position:0 0,1px 2px}
+.arch-frame{border-top-left-radius:9999px;border-top-right-radius:9999px;overflow:hidden}
+.stitch{border:2px dashed var(--forest)}
+.stitch-ink{border:2px dashed var(--ink)}
+.stitch-mustard{border:2px dashed var(--mustard)}
+.ribbon-diagonal{transform:rotate(-4deg)}
+.aged-photo{filter:sepia(.35) contrast(1.05) saturate(.85) brightness(.97)}
+.felt-glow{box-shadow:inset 0 0 120px rgba(0,0,0,.55),inset 0 0 30px rgba(217,164,65,.25)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 1s ease-out,transform 1s ease-out}
+.reveal.is-visible{opacity:1;transform:none}
+
+.chip{display:inline-block;padding:4px 16px;font-size:12px;letter-spacing:.25em;font-weight:600;text-transform:uppercase}
+.chip.forest{background:var(--forest);color:var(--paper)}
+.chip.mustard{background:var(--mustard);color:var(--ink)}
+
+.badge{display:inline-flex;align-items:center;justify-content:center}
+
+/* Hero */
+.hero{position:relative;overflow:hidden}
+.hero-bar{width:100%;height:12px;background:var(--forest);border-bottom:2px dashed var(--mustard)}
+.hero-in{padding:40px 0 64px}
+@media(min-width:640px){.hero-in{padding:56px 0 96px}}
+.hero-ribbon{display:flex;justify-content:center;margin-bottom:32px}
+.hero-ribbon .inner{background:var(--forest);color:var(--paper);padding:6px 24px;font-family:'Abril Fatface',serif;font-size:14px;letter-spacing:.15em}
+@media(min-width:640px){.hero-ribbon .inner{font-size:16px}}
+.hero-g{display:grid;gap:40px;align-items:center}
+@media(min-width:1024px){.hero-g{grid-template-columns:1fr 1fr}}
+.hero-left{text-align:center}
+@media(min-width:1024px){.hero-left{text-align:left}}
+.hero-left .badge{display:flex;justify-content:center;margin-bottom:24px}
+@media(min-width:1024px){.hero-left .badge{justify-content:flex-start}}
+.hero h1{font-family:'Abril Fatface',serif;color:var(--ink);line-height:.92;letter-spacing:-.02em}
+.hero h1 .big{display:block;font-size:clamp(3rem,10vw,4.5rem)}
+.hero h1 .dot{display:block;font-size:clamp(1.5rem,4vw,1.875rem);color:var(--forest);margin:4px 0;letter-spacing:.2em}
+@media(min-width:640px){.hero h1 .dot{margin:8px 0}}
+.hero .tagline{margin-top:24px;font-size:clamp(1.125rem,2vw,1.25rem);color:var(--forest);font-style:italic;max-width:448px}
+@media(min-width:1024px){.hero .tagline{margin-left:0;margin-right:auto}}
+.hero .tagline-wrap{margin-top:32px;display:flex;justify-content:center}
+@media(min-width:1024px){.hero .tagline-wrap{justify-content:flex-start}}
+.btn-stitch{display:inline-block;background:var(--mustard);color:var(--ink);font-family:'Abril Fatface',serif;letter-spacing:.05em;padding:12px 32px;font-size:1.125rem;border:2px dashed var(--ink);transition:.3s}
+.btn-stitch:hover{background:#e3b656}
+.hero-right{position:relative}
+.hero-ph{padding:8px;background:var(--forest);box-shadow:8px 8px 0 0 var(--ink);border:2px dashed var(--forest)}
+.hero-ph .ph{aspect-ratio:auto;height:360px}
+@media(min-width:640px){.hero-ph .ph{height:460px}}
+.hero-tag{position:absolute;bottom:-16px;left:-16px;background:var(--mustard);color:var(--ink);padding:4px 16px;font-family:'Abril Fatface',serif;font-size:14px;letter-spacing:.05em;display:none}
+@media(min-width:640px){.hero-tag{display:block}}
+.hero-stripe{height:24px;width:100%;display:flex;overflow:hidden}
+.hero-stripe div{flex:1;height:100%;transform:skewX(-20deg)}
+
+/* Chapter sections */
+.chapter-head{text-align:center;margin-bottom:40px}
+.chapter-head h2{font-family:'Abril Fatface',serif;font-size:clamp(2.2rem,5vw,3rem);margin-top:16px;color:var(--ink)}
+.chapter-head p.sub{margin-top:8px;color:var(--forest);font-style:italic}
+
+.split{display:grid;gap:40px;align-items:center}
+@media(min-width:768px){.split{grid-template-columns:1fr 1fr}}
+.split .ph-col{padding:8px;background:var(--forest);border:2px dashed var(--forest)}
+.split .ph-col .ph{height:320px}
+@media(min-width:640px){.split .ph-col .ph{height:400px}}
+.split-txt h2{font-family:'Abril Fatface',serif;font-size:clamp(2.2rem,5vw,3rem);color:var(--ink)}
+.split-txt p{margin-top:16px;line-height:1.6}
+.split-txt .quote{font-family:'Abril Fatface',serif;font-size:1.25rem;color:var(--forest);margin-top:20px}
+
+/* Dark sections (Escuela, CasaClub) */
+.dark-sec{background:var(--forest);color:var(--paper)}
+.dark-sec .split-txt h2{color:var(--paper)}
+.dark-sec .split-txt p{color:var(--paper)}
+.dark-sec .split .ph-col{background:var(--ink);border:2px dashed var(--mustard)}
+.dark-sec .rev .ph-col{order:2}
+@media(min-width:768px){.dark-sec .rev .ph-col{order:2}.dark-sec .rev .txt-col{order:1}}
+.dark-sec ul{margin-top:8px;display:grid;gap:8px}
+.dark-sec ul li{display:flex;gap:8px;color:var(--paper)}
+.dark-sec ul li .star{color:var(--mustard);font-family:'Abril Fatface',serif}
+
+/* Taller */
+.taller .split .ph-col{order:1}
+
+/* Parrilla */
+.parrilla-cards{display:grid;gap:20px}
+.parrilla-card{padding:16px;background:var(--paper);border:2px dashed var(--ink)}
+.parrilla-card h3{font-family:'Abril Fatface',serif;font-size:1.5rem;color:var(--forest)}
+.parrilla-card p{font-size:1rem;color:var(--ink);margin-top:4px;line-height:1.6}
+
+/* Tablero */
+.tablero{background:var(--forest);padding:24px;border:2px dashed var(--mustard);box-shadow:8px 8px 0 0 var(--ink)}
+@media(min-width:640px){.tablero{padding:32px}}
+.tablero-head{display:flex;align-items:center;justify-content:space-between;border-bottom:2px dashed var(--mustard);padding-bottom:12px;margin-bottom:16px}
+.tablero-head .t1{font-family:'Abril Fatface',serif;color:var(--paper);font-size:1.25rem;letter-spacing:.05em}
+.tablero-head .t2{color:var(--mustard);font-size:12px;letter-spacing:.2em;font-weight:600}
+.tablero ul{display:grid;gap:0}
+.tablero li{display:grid;grid-template-columns:auto 1fr auto;gap:12px;padding:12px 0;align-items:center;border-bottom:1px dashed rgba(217,164,65,.6)}
+.tablero li:last-child{border-bottom:0}
+@media(min-width:640px){.tablero li{gap:24px}}
+.tablero .fecha{font-family:'Abril Fatface',serif;color:var(--mustard);font-size:1.125rem;width:64px;text-align:center}
+@media(min-width:640px){.tablero .fecha{font-size:1.25rem}}
+.tablero .nombre{color:var(--paper);font-size:1rem}
+@media(min-width:640px){.tablero .nombre{font-size:1.125rem}}
+.tablero .cat{color:rgba(246,241,228,.8);font-size:.875rem;text-align:right;letter-spacing:.05em}
+.tablero .foot{margin-top:20px;text-align:center;color:rgba(246,241,228,.7);font-size:12px;letter-spacing:.2em;font-weight:600}
+
+/* Casino */
+.casino{background:var(--casino);padding:64px 0}
+@media(min-width:640px){.casino{padding:80px 0}}
+.casino-head{text-align:center;margin-bottom:32px}
+.casino-head h2{font-family:'Abril Fatface',serif;font-size:clamp(2.2rem,5vw,3rem);color:var(--mustard);margin-top:16px}
+.casino-frame{background:var(--forest);padding:24px;border:2px dashed var(--mustard)}
+.casino-frame.felt{box-shadow:inset 0 0 120px rgba(0,0,0,.55),inset 0 0 30px rgba(217,164,65,.25)}
+@media(min-width:640px){.casino-frame{padding:40px}}
+.casino-imgs{display:grid;gap:24px;margin-bottom:32px}
+@media(min-width:768px){.casino-imgs{grid-template-columns:1fr 1fr}}
+.casino-imgs .ph-col{padding:8px;background:var(--ink);border:2px dashed var(--mustard)}
+.casino-imgs .ph{height:260px}
+@media(min-width:640px){.casino-imgs .ph{height:320px}}
+.casino-txt{max-width:768px;margin:0 auto;text-align:center;color:var(--paper);display:grid;gap:16px;font-size:1.125rem;line-height:1.6}
+.casino-cards{display:grid;gap:16px;margin-top:32px}
+@media(min-width:640px){.casino-cards{grid-template-columns:repeat(3,1fr)}}
+.casino-card{padding:16px;border:2px dashed var(--mustard)}
+.casino-card h3{font-family:'Abril Fatface',serif;font-size:1.25rem;color:var(--mustard);margin-bottom:4px}
+.casino-card p{color:rgba(246,241,228,.9);font-size:.94rem;line-height:1.55}
+.casino-plus{margin-top:32px;text-align:center;font-family:'Abril Fatface',serif;color:var(--mustard);font-size:1.125rem;letter-spacing:.2em}
+
+/* Politicas */
+.pol-list{display:grid;gap:12px}
+.pol-item{background:var(--paper);border:2px dashed var(--ink)}
+.pol-trigger{width:100%;display:flex;align-items:center;justify-content:space-between;padding:16px 20px;text-align:left}
+.pol-trigger span.t{font-family:'Abril Fatface',serif;font-size:clamp(1.25rem,3vw,1.5rem);color:var(--forest)}
+.pol-trigger span.i{font-family:'Abril Fatface',serif;font-size:1.5rem;color:var(--mustard)}
+.pol-body{padding:0 20px 20px;color:var(--ink);font-size:1rem;line-height:1.65;display:none}
+.pol-item.open .pol-body{display:block}
+
+/* Footer */
+footer{background:var(--ink);color:var(--paper);padding:64px 0}
+.f-grid{display:grid;gap:40px;align-items:center}
+@media(min-width:768px){.f-grid{grid-template-columns:1fr 1fr 1fr}}
+.f-badge{display:flex;justify-content:center}
+@media(min-width:768px){.f-badge{justify-content:flex-start}}
+.f-cta{text-align:center}
+.f-cta h2{font-family:'Abril Fatface',serif;font-size:clamp(1.875rem,4vw,2.5rem);color:var(--mustard)}
+.f-cta p{margin-top:8px;color:rgba(246,241,228,.8);font-size:.94rem}
+.f-cta .btn-stitch{margin-top:20px}
+.f-nav{text-align:center}
+@media(min-width:768px){.f-nav{text-align:right}}
+.f-nav h4{font-size:12px;letter-spacing:.25em;color:var(--mustard);margin-bottom:12px;font-weight:600}
+.f-nav ul{display:grid;gap:8px}
+.f-nav a{color:rgba(246,241,228,.85);font-size:.94rem;transition:.3s}
+.f-nav a:hover{color:var(--mustard);text-decoration:underline;text-underline-offset:4px}
+.f-bottom{margin-top:48px;padding-top:24px;border-top:2px dashed rgba(217,164,65,.5);text-align:center;font-size:12px;letter-spacing:.15em;color:rgba(246,241,228,.6)}
+</style>
+</head>
+<body>
+
+<header class="hero paper-grain">
+  <div class="hero-bar"></div>
+  <div class="wrap hero-in">
+    <div class="hero-ribbon">
+      <div class="inner ribbon-diagonal">CLUB DE REGATAS DEL DELTA</div>
+    </div>
+    <div class="hero-g">
+      <div class="hero-left">
+        <div class="badge">
+          <svg width="130" height="130" viewBox="0 0 120 120" aria-hidden="true">
+            <circle cx="60" cy="60" r="58" fill="none" stroke="#1F4D3A" stroke-width="2"/>
+            <circle cx="60" cy="60" r="50" fill="none" stroke="#1F4D3A" stroke-width="1" stroke-dasharray="3 4"/>
+            <circle cx="60" cy="60" r="40" fill="#1F4D3A"/>
+            <defs>
+              <path id="arcTop" d="M 16 60 A 44 44 0 0 1 104 60" fill="none"/>
+              <path id="arcBot" d="M 18 64 A 42 42 0 0 0 102 64" fill="none"/>
+            </defs>
+            <text fill="#1F4D3A" font-family="Source Sans 3,sans-serif" font-size="9" letter-spacing="2" font-weight="700">
+              <textPath href="#arcTop" startOffset="50%" text-anchor="middle">FUNDADO EN LA TRADICIÓN</textPath>
+            </text>
+            <text fill="#1F4D3A" font-family="Source Sans 3,sans-serif" font-size="7" letter-spacing="3" font-weight="600">
+              <textPath href="#arcBot" startOffset="50%" text-anchor="middle">TIGRE · ARGENTINA</textPath>
+            </text>
+            <g stroke="#D9A441" stroke-width="2.4" fill="none" stroke-linecap="round">
+              <circle cx="60" cy="46" r="5"/>
+              <line x1="60" y1="51" x2="60" y2="78"/>
+              <line x1="50" y1="58" x2="70" y2="58"/>
+              <path d="M 46 70 A 14 14 0 0 0 74 70"/>
+              <line x1="46" y1="68" x2="46" y2="72"/>
+              <line x1="74" y1="68" x2="74" y2="72"/>
+            </g>
+          </svg>
+        </div>
+        <h1>
+          <span class="big">REGATAS</span>
+          <span class="dot">·</span>
+          <span class="big">REMO</span>
+          <span class="dot">·</span>
+          <span class="big">TRADICIÓN</span>
+        </h1>
+        <p class="tagline">Desde las entrañas del Delta, el corazón náutico de la Argentina.</p>
+        <div class="tagline-wrap">
+          <a href="#socio" class="btn-stitch">HÁGASE SOCIO</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-ph arch-frame">
+          <div class="ph arch-frame">
+            <img class="aged-photo" src="https://media.base44.com/images/public/6a85f57a4371113702c7b9bc/566a7071f_generated_29f10973.png" alt="Fotografía antigua de un bote de madera surcando el río Luján al amanecer">
+          </div>
+        </div>
+        <div class="hero-tag ribbon-diagonal">RÍO LUJÁN · 1941</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-stripe" id="heroStripe"></div>
+</header>
+
+<section class="shell paper-grain" id="historia">
+  <div class="wrap">
+    <div class="chapter-head reveal">
+      <span class="chip forest">CAPÍTULO I</span>
+      <h2>El Delta y su Historia</h2>
+    </div>
+    <div class="split">
+      <div class="ph-col reveal">
+        <div class="ph arch-frame">
+          <img class="aged-photo" src="https://media.base44.com/images/public/6a85f57a4371113702c7b9bc/0b416a64f_generated_ee2e6900.png" alt="Vista aérea antigua del delta del río Paraná en Tigre con islas y canales">
+        </div>
+      </div>
+      <div class="split-txt reveal" style="transition-delay:.1s">
+        <p>En el corazón del Delta del Paraná, donde el agua se ramifica en infinitos canales y islas de vegetación exuberante, nació hace más de ocho décadas una institución dedicada al remo, la vela y la preservación de la cultura náutica argentina.</p>
+        <p>El Club de Regatas del Delta fue fundado por un grupo de pioneros que entendieron que el río no era solo un paisaje, sino una forma de vida. Desde entonces, generaciones de remeros y velistas han surcado estas aguas, forjando una tradición que combina destreza deportiva, respeto por la naturaleza y un profundo sentido de pertenencia.</p>
+        <p class="quote">"El río enseña lo que ningún libro puede: paciencia, equilibrio y comunidad."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="shell dark-sec" id="escuela">
+  <div class="wrap">
+    <div class="split rev">
+      <div class="txt-col reveal">
+        <span class="chip mustard ribbon-diagonal">ESCUELA</span>
+        <h2 style="margin-top:16px">Escuela de Remo y Vela</h2>
+        <p>La escuela forma a las nuevas generaciones en el arte del remo y la vela, transmitiendo técnicas que se perfeccionan desde los albores del club. Bajo la guía de instructores experimentados, los aprendices descubren el equilibrio entre la fuerza del cuerpo y el silencio del agua.</p>
+        <p>Desde los primeros palazos en botes de iniciación hasta la competencia en regatas interclubes, cada etapa respetan el ritmo del río y la tradición que nos define.</p>
+        <ul>
+          <li><span class="star">✦</span> Categorías infantiles, juveniles y master</li>
+          <li><span class="star">✦</span> Flota de sculls y veleros clásicos</li>
+          <li><span class="star">✦</span> Salidas guiadas por los canales del delta</li>
+        </ul>
+      </div>
+      <div class="ph-col reveal" style="transition-delay:.1s">
+        <div class="ph arch-frame">
+          <img class="aged-photo" src="https://media.base44.com/images/public/6a85f57a4371113702c7b9bc/17450513b_generated_521e3831.png" alt="Antiguos botes de remo y vela en entrenamiento sobre las aguas del delta">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="shell paper-grain taller" id="taller">
+  <div class="wrap">
+    <div class="split">
+      <div class="ph-col reveal">
+        <div class="ph arch-frame">
+          <img class="aged-photo" src="https://media.base44.com/images/public/6a85f57a4371113702c7b9bc/703262665_generated_c67b7b1b.png" alt="Taller de restauración de botes clásicos de madera con herramientas artesanales">
+        </div>
+      </div>
+      <div class="split-txt reveal" style="transition-delay:.1s">
+        <span class="chip mustard">CAPÍTULO III</span>
+        <h2 style="margin-top:16px">Taller de Botes Clásicos</h2>
+        <p>Nuestro taller artesanal es el alma material del club. Allí, maestros carpinteros de ribera restauran y construyen botes de madera con técnicas transmitidas de generación en generación, cuidando cada scull como una pieza de museo navegante.</p>
+        <p>El aroma a cedro y lino impregna cada rincón, mientras las herramientas manuales dan forma a quillas, remos y mástiles que conservan la elegancia de la náutica clásica.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="shell dark-sec" id="casa-club">
+  <div class="wrap">
+    <div class="split">
+      <div class="txt-col reveal">
+        <span class="chip mustard">CAPÍTULO IV</span>
+        <h2 style="margin-top:16px">Casa Club Ribereña</h2>
+        <p>La casa club se alza sobre la costa del Luján como un testimonio de la arquitectura náutica de los años cuarenta. Sus salones de techos altos, madera oscura y trofeos pulidos por el tiempo reciben a socios y visitantes en un ambiente de distinción ribereña.</p>
+        <p>Desde sus galerías se contemplan las regatas al atardecer, mientras el río susurra la historia de cada embarcación que ha partido de su muelle.</p>
+        <ul>
+          <li><span class="star">✦</span> Marina con amarras para socios</li>
+          <li><span class="star">✦</span> Salón social y biblioteca náutica</li>
+          <li><span class="star">✦</span> Galeria de trofeos históricos</li>
+        </ul>
+      </div>
+      <div class="ph-col reveal" style="transition-delay:.1s">
+        <div class="ph arch-frame">
+          <img class="aged-photo" src="https://media.base44.com/images/public/6a85f57a4371113702c7b9bc/6b01c19a4_generated_5eb4ca98.png" alt="Interior antiguo del salón de la casa club con techos altos y trofeos náuticos">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="shell paper-grain" id="parrilla">
+  <div class="wrap">
+    <div class="chapter-head reveal">
+      <span class="chip forest">CAPÍTULO V</span>
+      <h2>Parrilla del Río</h2>
+      <p class="sub">Fuegos, asado y tradición junto al agua.</p>
+    </div>
+    <div class="split">
+      <div class="ph-col reveal">
+        <div class="ph arch-frame">
+          <img class="aged-photo" src="https://media.base44.com/images/public/6a85f57a4371113702c7b9bc/028f74a20_generated_2d5ed14b.png" alt="Humo rising de una parrilla de hierro con cortes de carne asada">
+        </div>
+      </div>
+      <div class="parrilla-cards reveal" style="transition-delay:.1s">
+        <div class="parrilla-card">
+          <h3>Asado de Obra</h3>
+          <p>Cocción lenta sobre brasas de leña del delta.</p>
+        </div>
+        <div class="parrilla-card">
+          <h3>Cortes de Pastura</h3>
+          <p>Carnes maduras seleccionadas por nuestro asador.</p>
+        </div>
+        <div class="parrilla-card">
+          <h3>Fuegos del Río</h3>
+          <p>Parrilla a la vista, humo y tradición ribereña.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="shell paper-grain" id="regatas">
+  <div class="wrap" style="max-width:1024px">
+    <div class="chapter-head reveal">
+      <span class="chip forest">CAPÍTULO VI</span>
+      <h2>Tablero de Regatas</h2>
+    </div>
+    <div class="tablero reveal" style="transition-delay:.1s">
+      <div class="tablero-head">
+        <span class="t1">TEMPORADA 2026</span>
+        <span class="t2">FIXTURE OFICIAL</span>
+      </div>
+      <ul>
+        <li><span class="fecha">12 ABR</span><span class="nombre">Regata Inaugural del Luján</span><span class="cat">Scull Individual</span></li>
+        <li><span class="fecha">03 MAY</span><span class="nombre">Copa Delta del Paraná</span><span class="cat">Doble Par</span></li>
+        <li><span class="fecha">21 JUN</span><span class="nombre">Regata de Invierno</span><span class="cat">Cuatro sin Timonel</span></li>
+        <li><span class="fecha">09 AGO</span><span class="nombre">Clásico Tigre–San Fernando</span><span class="cat">Veleros Clásicos</span></li>
+        <li><span class="fecha">17 OCT</span><span class="nombre">Regata Aniversario</span><span class="cat">Ocho con Timonel</span></li>
+        <li><span class="fecha">07 DIC</span><span class="nombre">Regata de Cierre de Temporada</span><span class="cat">Categorías Abiertas</span></li>
+      </ul>
+      <p class="foot">SOLO INFORMACIÓN · CONSULTE EL CARTELERO DEL CLUB</p>
+    </div>
+  </div>
+</section>
+
+<section class="casino" id="casino">
+  <div class="wrap">
+    <div class="casino-head reveal">
+      <span class="chip mustard">SALÓN DE JUEGOS DEL DELTA</span>
+      <h2>Casino Club: Elegancia y Azar</h2>
+    </div>
+    <div class="casino-frame felt reveal" style="transition-delay:.1s">
+      <div class="casino-imgs">
+        <div class="ph-col">
+          <div class="ph arch-frame">
+            <img class="aged-photo" src="https://media.base44.com/images/public/6a85f57a4371113702c7b9bc/c3e78d04f_generated_a71f898e.png" alt="Salón físico del casino del club con mesas de caoba y lámparas cálidas">
+          </div>
+        </div>
+        <div class="ph-col">
+          <div class="ph arch-frame">
+            <img class="aged-photo" src="https://media.base44.com/images/public/6a85f57a4371113702c7b9bc/c5be1cca6_generated_1e9c0584.png" alt="Detalle de una ruleta física y mesa de paño verde bajo luz cálida del casino">
+          </div>
+        </div>
+      </div>
+      <div class="casino-txt">
+        <p>Un espacio de distinción dentro de nuestro complejo. Disfrute de la atmósfera clásica de nuestro casino físico, donde la tradición del Delta se encuentra con la emoción del juego en un entorno seguro y exclusivo.</p>
+        <p>El casino del Club de Regatas del Delta es un salón de juegos presencial y terrestre, integrado al mismo complejo ribereño que nuestra marina, escuela y casa club. Sus mesas de caoba, paños verdes y arañas de luz cálida recrean la elegancia de las salas de juego clásicas, ofreciendo una experiencia de casino cuidada en cada detalle.</p>
+      </div>
+      <div class="casino-cards">
+        <div class="casino-card"><h3>Atmósfera</h3><p>Salón presencial de inspiración británica con paños verdes y madera de caoba.</p></div>
+        <div class="casino-card"><h3>Instalaciones</h3><p>Salas de juego, recepción y zona de descanso dentro del complejo del club.</p></div>
+        <div class="casino-card"><h3>Experiencia de Juego</h3><p>Mesas clásicas de casino atendidas por croupiers profesionales.</p></div>
+      </div>
+      <p class="casino-plus">+18 · JUEGO RESPONSABLE</p>
+    </div>
+  </div>
+</section>
+
+<section class="shell paper-grain" id="politicas">
+  <div class="wrap" style="max-width:896px">
+    <div class="chapter-head reveal">
+      <span class="chip forest">ARCHIVO</span>
+      <h2>Políticas del Club</h2>
+    </div>
+    <div class="pol-list reveal" style="transition-delay:.1s">
+      <div class="pol-item" data-id="juego-responsable">
+        <button class="pol-trigger"><span class="t">Juego Responsable</span><span class="i">+</span></button>
+        <div class="pol-body"><p>El Club de Regatas del Delta promueve el entretenimiento saludable. El juego es una actividad de ocio y no un medio de vida. Ofrecemos herramientas de autoexclusión y límites de tiempo para garantizar un entorno seguro. El ingreso al Casino es exclusivo para mayores de 18 años. Si siente que el juego dejó de ser una diversión, busque ayuda profesional.</p></div>
+      </div>
+      <div class="pol-item" data-id="accesibilidad">
+        <button class="pol-trigger"><span class="t">Accesibilidad</span><span class="i">+</span></button>
+        <div class="pol-body"><p>Nos comprometemos a que nuestra plataforma sea accesible para todos los socios, siguiendo las pautas WCAG 2.2 Nivel AA. Nuestra arquitectura digital permite la navegación mediante lectores de pantalla y comandos de teclado, asegurando que la historia de nuestro club esté al alcance de toda la comunidad.</p></div>
+      </div>
+      <div class="pol-item" data-id="privacidad">
+        <button class="pol-trigger"><span class="t">Política de Privacidad</span><span class="i">+</span></button>
+        <div class="pol-body"><p>Los datos personales de nuestros socios son tratados con la máxima confidencialidad. Recopilamos información únicamente para fines administrativos y de comunicación institucional. Nunca compartimos su información con terceros sin consentimiento expreso, cumpliendo con la Ley de Protección de Datos Personales.</p></div>
+      </div>
+      <div class="pol-item" data-id="cookies">
+        <button class="pol-trigger"><span class="t">Política de Cookies</span><span class="i">+</span></button>
+        <div class="pol-body"><p>Este sitio utiliza cookies técnicas esenciales para optimizar su experiencia de navegación y recordar sus preferencias estéticas. No utilizamos cookies de rastreo publicitario de terceros. Al continuar navegando, usted acepta el uso de estas herramientas de mejora operativa.</p></div>
+      </div>
+      <div class="pol-item" data-id="terminos">
+        <button class="pol-trigger"><span class="t">Términos y Condiciones</span><span class="i">+</span></button>
+        <div class="pol-body"><p>El uso de las instalaciones del Club de Regatas del Delta, incluyendo la marina, la escuela y el casino, está sujeto al estatuto vigente de la institución. El Club se reserva el derecho de admisión y permanencia para mantener el ambiente de respeto y tradición que nos caracteriza.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="socio">
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-badge">
+        <svg width="110" height="110" viewBox="0 0 120 120" aria-hidden="true">
+          <circle cx="60" cy="60" r="58" fill="none" stroke="#1F4D3A" stroke-width="2"/>
+          <circle cx="60" cy="60" r="50" fill="none" stroke="#1F4D3A" stroke-width="1" stroke-dasharray="3 4"/>
+          <circle cx="60" cy="60" r="40" fill="#1F4D3A"/>
+          <defs>
+            <path id="arcTop2" d="M 16 60 A 44 44 0 0 1 104 60" fill="none"/>
+            <path id="arcBot2" d="M 18 64 A 42 42 0 0 0 102 64" fill="none"/>
+          </defs>
+          <text fill="#1F4D3A" font-family="Source Sans 3,sans-serif" font-size="9" letter-spacing="2" font-weight="700">
+            <textPath href="#arcTop2" startOffset="50%" text-anchor="middle">FUNDADO EN LA TRADICIÓN</textPath>
+          </text>
+          <text fill="#1F4D3A" font-family="Source Sans 3,sans-serif" font-size="7" letter-spacing="3" font-weight="600">
+            <textPath href="#arcBot2" startOffset="50%" text-anchor="middle">TIGRE · ARGENTINA</textPath>
+          </text>
+          <g stroke="#D9A441" stroke-width="2.4" fill="none" stroke-linecap="round">
+            <circle cx="60" cy="46" r="5"/>
+            <line x1="60" y1="51" x2="60" y2="78"/>
+            <line x1="50" y1="58" x2="70" y2="58"/>
+            <path d="M 46 70 A 14 14 0 0 0 74 70"/>
+            <line x1="46" y1="68" x2="46" y2="72"/>
+            <line x1="74" y1="68" x2="74" y2="72"/>
+          </g>
+        </svg>
+      </div>
+      <div class="f-cta">
+        <h2>Hágase Socio</h2>
+        <p>Sumese a más de ocho décadas de tradición náutica en el Delta del Paraná.</p>
+        <a href="mailto:socios@regatasdeltatigre.org.ar" class="btn-stitch" style="border-color:var(--mustard)">HÁGASE SOCIO</a>
+      </div>
+      <nav class="f-nav">
+        <h4>POLÍTICAS</h4>
+        <ul>
+          <li><a href="#juego-responsable">Juego Responsable</a></li>
+          <li><a href="#accesibilidad">Accesibilidad</a></li>
+          <li><a href="#privacidad">Política de Privacidad</a></li>
+          <li><a href="#cookies">Política de Cookies</a></li>
+          <li><a href="#terminos">Términos y Condiciones</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="f-bottom">CLUB DE REGATAS DEL DELTA · TIGRE · ARGENTINA · +18 JUEGO RESPONSABLE</p>
+  </div>
+</footer>
+
+<script>
+// Hero stripe
+const stripe=document.getElementById('heroStripe');
+if(stripe){
+  for(let i=0;i<24;i++){
+    const d=document.createElement('div');
+    d.style.background=i%2===0?'#1F4D3A':'#D9A441';
+    stripe.appendChild(d);
+  }
+}
+
+// Accordion
+document.querySelectorAll('.pol-trigger').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item=btn.parentElement;
+    const icon=btn.querySelector('.i');
+    const wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.pol-item').forEach(x=>{x.classList.remove('open');x.querySelector('.i').textContent='+'});
+    if(!wasOpen){item.classList.add('open');icon.textContent='–';}
+  });
+});
+
+// Reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{threshold:.1,rootMargin:'-80px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
