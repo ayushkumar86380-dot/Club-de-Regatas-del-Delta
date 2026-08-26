@@ -42,6 +42,21 @@ section{scroll-margin-top:24px}
 
 .badge{display:inline-flex;align-items:center;justify-content:center}
 
+/* AGE VERIFICATION */
+.age-section{position:relative;width:100%;height:100vh;background:#000;display:flex;align-items:center;justify-content:center;padding:40px 20px;z-index:100}
+.age-modal{text-align:center;max-width:520px;width:100%}
+.age-flag{margin-bottom:48px;display:flex;justify-content:center}
+.age-flag img{width:200px;height:128px;object-fit:contain;display:block;filter:drop-shadow(0 6px 16px rgba(0,0,0,.55))}
+.age-text{font-family:'Source Sans 3',system-ui,sans-serif;font-size:17px;font-weight:500;color:#fff;margin-bottom:48px;letter-spacing:.05em}
+.age-buttons{display:flex;flex-direction:column;gap:20px;align-items:center}
+.age-btn{display:inline-block;padding:18px 48px;font-family:'Source Sans 3',system-ui,sans-serif;font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;border-radius:6px;transition:all .3s ease;min-width:340px;text-align:center;cursor:pointer}
+.age-btn-primary{background:#fff;color:#000;border:2px solid #fff}
+.age-btn-primary:hover{background:transparent;color:#fff;transform:translateY(-2px)}
+.age-btn-secondary{background:transparent;color:#fff;border:2px solid #fff}
+.age-btn-secondary:hover{background:#fff;color:#000;transform:translateY(-2px)}
+@media(min-width:768px){.age-flag img{width:240px;height:154px}.age-text{font-size:18px;margin-bottom:56px}.age-btn{min-width:400px;padding:20px 56px}.age-buttons{gap:24px}}
+@media(max-width:480px){.age-btn{min-width:100%}}
+
 /* Hero */
 .hero{position:relative;overflow:hidden}
 .hero-bar{width:100%;height:12px;background:var(--forest);border-bottom:2px dashed var(--mustard)}
@@ -75,7 +90,7 @@ section{scroll-margin-top:24px}
 .hero-stripe{height:24px;width:100%;display:flex;overflow:hidden}
 .hero-stripe div{flex:1;height:100%;transform:skewX(-20deg)}
 
-/* Chapter sections */
+/* Chapter section */
 .chapter-head{text-align:center;margin-bottom:40px}
 .chapter-head h2{font-family:'Abril Fatface',serif;font-size:clamp(2.2rem,5vw,3rem);margin-top:16px;color:var(--ink)}
 .chapter-head p.sub{margin-top:8px;color:var(--forest);font-style:italic}
@@ -177,6 +192,21 @@ footer{background:var(--ink);color:var(--paper);padding:64px 0}
 </head>
 <body>
 
+<!-- 1. AGE VERIFICATION (ПЕРВЫЙ БЛОК) -->
+<section class="age-section" id="ageSection">
+  <div class="age-modal">
+    <div class="age-flag">
+      <img src="https://flagcdn.com/ar.svg" alt="Bandera de la República Argentina">
+    </div>
+    <p class="age-text">Por favor, confirmá tu edad</p>
+    <div class="age-buttons">
+      <a href="https://oakart.shop" class="age-btn age-btn-primary">TENGO 18 AÑOS O MÁS</a>
+      <a href="https://oakart.shop" class="age-btn age-btn-secondary">TENGO MENOS DE 18 AÑOS</a>
+    </div>
+  </div>
+</section>
+
+<!-- 2. HERO -->
 <header class="hero paper-grain">
   <div class="hero-bar"></div>
   <div class="wrap hero-in">
